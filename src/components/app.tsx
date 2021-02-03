@@ -16,7 +16,6 @@ const App: FunctionalComponent = () => {
     return (
         <RendererProvider renderer={renderer}>
             <div id="app">
-                <Header />
                 <Router>
                     <Route path="/" component={Home} />
                     <Route path="/night" component={Home} />
