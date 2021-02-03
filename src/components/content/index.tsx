@@ -1,8 +1,11 @@
 import { FunctionalComponent, h } from "preact";
+import { useFela } from "preact-fela";
+import { ContentStyle } from "./style";
 
 const Content: FunctionalComponent = () => {
+    const { css } = useFela();
     return (
-        <div class="content">
+        <div class={css(ContentStyle)}>
             <h1>Lorem ipsum dolor amend</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
