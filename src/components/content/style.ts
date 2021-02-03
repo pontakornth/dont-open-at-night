@@ -1,7 +1,12 @@
 import { IStyle } from "fela";
 
-export const ContentStyle = (): IStyle => ({
+export const ContentLayoutStyle = (): IStyle => ({
     marginLeft: "auto",
     marginRight: "auto",
     padding: "1rem"
+});
+
+export const ContentNightStyle = (): IStyle => ({
+    background: "#444",
+    color: "white"
 });

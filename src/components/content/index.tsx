@@ -1,11 +1,12 @@
+import { combineRules } from "fela";
 import { FunctionalComponent, h } from "preact";
 import { useFela } from "preact-fela";
-import { ContentStyle } from "./style";
+import { ContentLayoutStyle, ContentNightStyle } from "./style";
 
 const Content: FunctionalComponent = () => {
     const { css } = useFela();
     return (
-        <div class={css(ContentStyle)}>
+        <div class={css(ContentLayoutStyle)}>
             <h1>Lorem ipsum dolor amend</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
