@@ -4,8 +4,11 @@ export const HeaderStyle = (): IStyle => ({
     flexDirection: "row",
     justifyContent: "center",
     background: "dodgerblue",
-    color: "brown",
     padding: "1.25rem"
+});
+
+export const HeaderNightStyle = (): IStyle => ({
+    background: "#333"
 });
 
 // eslint-disable-next-line @typescript-eslint/interface-name-prefix
