@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from "preact";
 import { Route, Router } from "preact-router";
 import { RendererProvider } from "preact-fela";
-import { createRenderer } from "fela";
+import { createRenderer, IStyle } from "fela";
 import typescript from "fela-plugin-typescript";
 
 import Home from "../routes/home";
