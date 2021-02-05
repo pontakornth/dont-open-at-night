@@ -1,8 +1,6 @@
 import { IStyle } from "fela";
 
 export const ContentLayoutStyle = (): IStyle => ({
-    marginLeft: "auto",
-    marginRight: "auto",
     padding: "1rem"
 });
 
