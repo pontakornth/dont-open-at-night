@@ -1,5 +1,7 @@
 import { ComponentChildren, FunctionalComponent, h } from "preact";
+import { useFela } from "preact-fela";
 import { useEffect, useRef, useState } from "preact/hooks";
+import HorrorMessageStyle from "./style";
 
 interface HorrorMessageProps {
     children?: ComponentChildren;
@@ -8,6 +10,7 @@ interface HorrorMessageProps {
 const HorrorMessage: FunctionalComponent<HorrorMessageProps> = ({
     children
 }: HorrorMessageProps) => {
+    const { css } = useFela();
     const ref = useRef<HTMLDivElement>();
     const [passed, setPassed] = useState<boolean>(false);
     const [seen, setSeen] = useState<boolean>(false);
@@ -30,7 +33,11 @@ const HorrorMessage: FunctionalComponent<HorrorMessageProps> = ({
         };
     });
     return (
-        <div ref={ref} style={{ visibility: passed ? "hidden" : "visible" }}>
+        <div
+            ref={ref}
+            class={css(HorrorMessageStyle)}
+            style={{ visibility: passed ? "hidden" : "visible" }}
+        >
             {children}
         </div>
     );
