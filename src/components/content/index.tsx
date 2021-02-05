@@ -8,7 +8,12 @@ import { ContentLayoutStyle, ContentNightStyle } from "./style";
 const Content: FunctionalComponent = () => {
     const [message, setMessage] = useState<string>("");
     useLayoutEffect(() => {
-        setMessage(lorem);
+        const now = new Date();
+        if (now.getHours() > 18 || now.getHours() < 5) {
+            setMessage("I think you should not be here.");
+        } else {
+            setMessage(lorem);
+        }
     }, []);
     const { css } = useFela();
     return (
